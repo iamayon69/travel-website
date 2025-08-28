@@ -3,6 +3,7 @@ import { Poppins, Montserrat, Volkhov } from "next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./globals.css";
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -38,10 +39,21 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${montserrat.variable} ${volkhov.variable}`}
     >
-      <body className="bg-white">
-        <Navbar />
-        {children}
-        <Footer />
+      <body className="bg-white overflow-hidden">
+        <div className="absolute z-10 -top-[18%] -right-[2.5%]">
+          <Image
+            src="/images/herobg.svg"
+            alt="decore"
+            width={800}
+            height={900}
+            className="w-[766px] h-[872.5px]"
+          />
+        </div>
+        <div className="relative z-20">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
