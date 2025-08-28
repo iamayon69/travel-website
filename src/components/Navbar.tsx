@@ -5,7 +5,9 @@ const Navbar = () => {
   return (
     <nav className="w-full flex items-center justify-between h-20 pt-12 px-[140px]">
       {/* Logo */}
-      <div className="font-bold text-[2rem] text-[#212832] tracking-tight">Pack&amp;Go</div>
+      <div className="font-bold text-[40px] text-[#212832] tracking-tight">
+        Pack<span className="text-[#f0a501]">&amp;</span>Go
+      </div>
       {/* Nav options */}
       <div className="flex items-center gap-12">
         {navOptions.map((option) => (
