@@ -3,7 +3,7 @@ import { navOptions } from "../utils/navConfig";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-12 h-20 font-volkhov">
+    <nav className="w-full flex items-center justify-between px-12 h-20 pt-12">
       {/* Logo */}
       <div className="font-bold text-[2rem] text-[#212832] tracking-tight">Pack&amp;Go</div>
       {/* Nav options */}
@@ -11,19 +11,19 @@ const Navbar = () => {
         {navOptions.map((option) => (
           <span
             key={option}
-            className="text-[17px] font-medium text-[#212832] cursor-pointer"
+            className="text-[17px] font-medium text-[#212832] cursor-pointer font-poppins"
           >
             {option}
           </span>
         ))}
         {/* Sign up button */}
         <button
-          className="text-[17px] font-medium text-[#212832] border border-[#212832] rounded-lg px-6 py-2 ml-6 cursor-pointer bg-transparent"
+          className="text-[17px] font-medium text-[#212832] border border-[#212832] rounded-lg px-6 py-2 ml-6 cursor-pointer bg-transparent font-poppins"
         >
           Sign up
         </button>
         {/* EN dropdown */}
-        <div className="text-[17px] font-medium text-[#212832] flex items-center ml-6 cursor-pointer gap-1">
+        <div className="text-[17px] font-medium text-[#212832] flex items-center ml-6 cursor-pointer gap-1 font-poppins">
           EN
           <span className="text-xs">▼</span>
         </div>
