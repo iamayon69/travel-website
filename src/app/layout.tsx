@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${montserrat.variable} ${volkhov.variable}`}
     >
-      <body className="bg-white overflow-hidden">
+      <body className="bg-white overflow-x-hidden">
         <div className="absolute z-10 -top-[18%] -right-[2.5%]">
           <Image
             src="/images/herobg.svg"

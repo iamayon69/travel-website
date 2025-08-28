@@ -4,11 +4,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Brand color tokens */
+  --header-primary: #14183E; /* dark navy */
+  --text-primary: #5E6282; /* muted indigo/gray */
+  --header-secondary: #1E1D4C; /* deep indigo */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Expose color tokens to the theme */
+  --color-header-primary: var(--header-primary);
+  --color-text-primary: var(--text-primary);
+  --color-header-secondary: var(--header-secondary);
 
   /* Default Tailwind font stacks */
   --font-sans: var(--font-poppins), system-ui, sans-serif;
@@ -25,6 +34,16 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Convenience CSS helpers for the brand colors (use as className) */
+.header-primary { color: var(--color-header-primary); }
+.text-primary { color: var(--color-text-primary); }
+.header-secondary { color: var(--color-header-secondary); }
+
+/* Background helpers */
+.bg-header-primary { background-color: var(--color-header-primary); }
+.bg-text-primary { background-color: var(--color-text-primary); }
+.bg-header-secondary { background-color: var(--color-header-secondary); }
 
 /* Utilities for font switching */
 @utility font-poppins {
