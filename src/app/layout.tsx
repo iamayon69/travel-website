@@ -1,28 +1,44 @@
 import type { Metadata } from "next";
+import { Poppins, Montserrat, Volkhov } from "next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./globals.css";
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-montserrat",
+});
+
+const volkhov = Volkhov({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-volkhov",
+});
+
 export const metadata: Metadata = {
   title: "Pack&Go",
   description:
-    "Pack&Go is your all-in-one travel companion designed to make exploring the world effortless and exciting. Whether you’re planning a weekend getaway, a luxury vacation, or a spontaneous adventure, Pack&Go helps you discover destinations, compare the best deals, and create unforgettable journeys with ease. With smart tools, curated guides, and seamless booking, we make sure you spend less time planning and more time experiencing the world.",
+    "Pack&Go is your all-in-one travel companion designed to make exploring the world effortless and exciting.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body style={{ backgroundColor: "#ffffff" }}>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${montserrat.variable} ${volkhov.variable}`}
+    >
+      <body className="bg-white">
         <Navbar />
         {children}
         <Footer />

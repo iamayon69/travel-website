@@ -3,7 +3,7 @@ import { navOptions } from "../utils/navConfig";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-12 h-20 pt-12">
+    <nav className="w-full flex items-center justify-between h-20 pt-12 px-[140px]">
       {/* Logo */}
       <div className="font-bold text-[2rem] text-[#212832] tracking-tight">Pack&amp;Go</div>
       {/* Nav options */}
