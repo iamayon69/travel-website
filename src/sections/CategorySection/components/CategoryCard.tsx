@@ -1,6 +1,7 @@
 // CategoryCard.tsx
 "use client";
 import React from "react";
+import Image from "next/image";
 
 type Props = {
   image: string;
@@ -38,7 +39,7 @@ const CategoryCard: React.FC<Props> = ({
         }
       }}
     >
-      <img src={image} alt={title} className="w-20 h-20 mb-4 object-contain" />
+  <Image src={image} alt={title} width={80} height={80} className="w-20 h-20 mb-4 object-contain" />
       <h3 className="font-semibold text-xl mb-2 text-header-primary">
         {title}
       </h3>

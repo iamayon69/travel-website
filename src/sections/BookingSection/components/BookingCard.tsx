@@ -40,13 +40,13 @@ const BookingCard: React.FC = () => {
         {/* icon row */}
         <div className="flex items-center gap-3 mb-6">
           <div className="w-9 h-9 rounded-full bg-[#F5F5F5] flex items-center justify-center">
-            <img src="/icons/leaf.svg" alt="leaf" className="w-[14px] h-[14px]" />
+              <Image src="/icons/leaf.svg" alt="leaf" width={14} height={14} className="w-[14px] h-[14px]" />
           </div>
           <div className="w-9 h-9 rounded-full bg-[#F5F5F5] flex items-center justify-center">
-            <img src="/icons/map.svg" alt="map" className="w-[14px] h-[14px]" />
+              <Image src="/icons/map.svg" alt="map" width={14} height={14} className="w-[14px] h-[14px]" />
           </div>
           <div className="w-9 h-9 rounded-full bg-[#F5F5F5] flex items-center justify-center">
-            <img src="/icons/send.svg" alt="send" className="w-[14px] h-[14px]" />
+              <Image src="/icons/send.svg" alt="send" width={14} height={14} className="w-[14px] h-[14px]" />
           </div>
         </div>
 
