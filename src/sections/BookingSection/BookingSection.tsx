@@ -34,13 +34,13 @@ const BookingSection = () => {
         <div className="relative z-20">
           <BookingCard />
         </div>
-        <div className="absolute z-30 left-0 top-0">
+        <div className="absolute z-30 right-30 bottom-5">
           <Image
-            width={270}
-            height={130}
+            width={500}
+            height={500}
             src="/bookingImages/travelCard.svg"
             alt="Booking Image"
-            className="w-[263px] h-[129px] object-cover"
+            className="w-[360px] h-[129px] object-contain"
           />
         </div>
         <div className="size-[360px] z-10 rounded-full bg-[#59B1E6] absolute -top-12 left-12 blur-[150px]"></div>

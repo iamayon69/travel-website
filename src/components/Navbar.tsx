@@ -24,11 +24,11 @@ const Navbar = () => {
         >
           Sign up
         </button>
-        {/* EN dropdown */}
+        {/* EN dropdown
         <div className="text-[17px] font-medium text-[#212832] flex items-center ml-6 cursor-pointer gap-1 font-poppins">
           EN
           <span className="text-xs">▼</span>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
