@@ -1,8 +1,6 @@
 
 export const navOptions = [
-	"Destinations",
-	"Hotels",
-	"Flights",
-	"Bookings",
-	"Login",
+	"Home",
+	"About",
+	"Tours",
 ];

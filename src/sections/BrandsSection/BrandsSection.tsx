@@ -14,7 +14,7 @@ const BrandsSection = () => {
   return (
     <section className="py-30">
       <div className="w-full px-4">
-        <Marquee gradient={false} speed={50} pauseOnHover={true} loop={0}>
+        <Marquee gradient={false} speed={100} pauseOnHover={false} loop={0}>
           {brandImages.map((src, idx) => (
             <div key={idx} className="mx-6 flex items-center justify-center">
               <Image

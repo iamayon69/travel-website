@@ -148,7 +148,7 @@ const HeroSection = () => {
             />
           </svg>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className="absolute top-[14%] -right-[10%]"
           animate={{
             y: [0, -5, 0, 5, 0], // small up/down float
@@ -248,7 +248,7 @@ const HeroSection = () => {
               fill="#3A556A"
             />
           </svg>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
