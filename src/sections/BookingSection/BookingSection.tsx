@@ -1,9 +1,12 @@
 import React from "react";
-import bookingCofig from "../../utils/bookingCofig";
+import BookingSteps from "./components/BookingSteps";
+import bookingConfig from "../../utils/bookingConfig";
+import BookingCard from "./components/BookingCard";
+import Image from "next/image";
 
 const BookingSection = () => {
   return (
-    <div className="flex gap-x-[20%] mt-30">
+    <div className="grid grid-cols-[6fr_6fr] gap-x-[20%] mt-30 font-poppins items-center">
       <div>
         <h1 className="text-lg text-left font-semibold text-text-primary mb-2 font-poppins">
           Easy and Fast
@@ -14,23 +17,33 @@ const BookingSection = () => {
         <h2 className="text-[50px] font-bold font-volkhov text-header-primary text-left mb-[68px]">
           In 3 Easy Steps
         </h2>
+
+        <div className="flex flex-col gap-y-8 font-poppins">
+          {bookingConfig.map((step, index) => (
+            <BookingSteps
+              key={index}
+              image={step.image}
+              title={step.title}
+              description={step.description}
+            />
+          ))}
+        </div>
       </div>
-      <div className="flex flex-col gap-y-8">
-        {bookingCofig.map((step, idx) => (
-          <div key={idx} className="flex items-start gap-x-4">
-            <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#F3F4F6]">
-              <img src={step.image} alt={step.title} className="w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-text-primary mb-2 font-poppins">
-                {step.title}
-              </h3>
-              <p className="text-base text-[#6B6B7A] max-w-[520px]">
-                {step.description}
-              </p>
-            </div>
-          </div>
-        ))}
+
+      <div className="relative">
+        <div className="relative z-20">
+          <BookingCard />
+        </div>
+        <div className="absolute z-30 left-0 top-0">
+          <Image
+            width={270}
+            height={130}
+            src="/bookingImages/travelCard.svg"
+            alt="Booking Image"
+            className="w-[263px] h-[129px] object-cover"
+          />
+        </div>
+        <div className="size-[360px] z-10 rounded-full bg-[#59B1E6] absolute -top-12 left-12 blur-[150px]"></div>
       </div>
     </div>
   );
