@@ -1,3 +1,4 @@
+import BookingSection from "@/sections/BookingSection/BookingSection";
 import CategorySection from "@/sections/CategorySection/CategorySection";
 import DestinationsSection from "@/sections/DestinationsSection/DestinationsSection";
 import HeroSection from "@/sections/HeroSection/HeroSection";
@@ -8,6 +9,7 @@ export default function page() {
       <HeroSection />
       <CategorySection />
       <DestinationsSection />
+      <BookingSection />
     </div>
   );
 }
