@@ -42,8 +42,8 @@ const TestimonialSection = () => {
             <button
               key={i}
               onClick={() => sliderRef.current?.slickGoTo(i)}
-              className={`w-3 h-3 rounded-full transition ${
-                activeSlide === i ? "bg-gray-800" : "bg-gray-400"
+              className={`w-4 h-4 rounded-full transition ${
+                activeSlide === i ? "bg-[#38425d]" : "bg-[#e5e5e5]"
               }`}
             />
           ))}
@@ -51,7 +51,7 @@ const TestimonialSection = () => {
       </div>
 
       {/* Right Side: Carousel with Arrows */}
-      <div className="flex gap-4 pt-10 relative">
+      <div className="flex gap-4 pt-10 relative h-[260px] overflow-y-hidden">
         <div>
           <Slider
             ref={sliderRef}
@@ -60,7 +60,7 @@ const TestimonialSection = () => {
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="h-[400px] flex items-center justify-center"
+                className="h-[400px] flex items-center justify-center pt-4"
               >
                 <TestimonialCard
                   name={t.name}
@@ -75,7 +75,7 @@ const TestimonialSection = () => {
         </div>
 
         {/* Manual Navigation */}
-        <div className="flex flex-col gap-12 absolute top-[20%] right-[15%]">
+        <div className="flex flex-col gap-12 absolute top-[32%] right-[15%]">
           <button
             onClick={() => sliderRef.current?.slickPrev()}
             className="flex items-center justify-center"
